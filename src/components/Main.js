@@ -7,13 +7,15 @@ export default function Main(){
 
     function handleSubmit(e){
         e.preventDefault()
-        setList(prev => {
-            return [
-                ...prev,
-                input
-            ]
-        })
-        setInput("")
+        if(input !== ""){
+            setList(prev => {
+                return [
+                    ...prev,
+                    input
+                ]
+            })
+            setInput("")
+        }
     }
 
     function handleChange(e){
